@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1x2keys3j2vf"]
+
+[ext_resource type="FontFile" uid="uid://g0e4g4332ft0" path="res://assets/Fonts/Raw/CC Wild Words Roman.ttf" id="1_uae04"]
+[ext_resource type="Script" path="res://NewGame.gd" id="2_84sdj"]
+[ext_resource type="Texture2D" uid="uid://26wqrar1o8aw" path="res://icon.png" id="3_27q44"]
+[ext_resource type="Script" path="res://StageSelect.gd" id="3_efsj4"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_uae04")
+text = "Judul"
+
+[node name="LinkButton" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+script = ExtResource("2_84sdj")
+scene_to_load = "Level 1"
+
+[node name="LinkButton2" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stage Select"
+script = ExtResource("3_efsj4")
+scene_to_load = "StageSelect"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_27q44")
+stretch_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/LinkButton" to="HBoxContainer/VBoxContainer/LinkButton" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/LinkButton2" to="HBoxContainer/VBoxContainer/LinkButton2" method="_on_pressed"]
