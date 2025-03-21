@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1x2keys3j2vf"]
+[gd_scene load_steps=6 format=3 uid="uid://d1x2keys3j2vf"]
 
 [ext_resource type="FontFile" uid="uid://g0e4g4332ft0" path="res://assets/Fonts/Raw/CC Wild Words Roman.ttf" id="1_uae04"]
 [ext_resource type="Script" path="res://NewGame.gd" id="2_84sdj"]
 [ext_resource type="Texture2D" uid="uid://26wqrar1o8aw" path="res://icon.png" id="3_27q44"]
 [ext_resource type="Script" path="res://StageSelect.gd" id="3_efsj4"]
+[ext_resource type="Texture2D" uid="uid://bfb7d5gbvj7o5" path="res://assets/kenney_platformerpack/PNG/Backgrounds/colored_shroom.png" id="5_nl27f"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -11,6 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(584, -42)
+scale = Vector2(1.50879, 1.50879)
+texture = ExtResource("5_nl27f")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2

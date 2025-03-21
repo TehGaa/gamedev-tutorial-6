@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=4 uid="uid://djhjj82du0q1c"]
+[gd_scene load_steps=7 format=4 uid="uid://djhjj82du0q1c"]
 
 [ext_resource type="PackedScene" uid="uid://gx43bs3f4le8" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://ckkeypji00rhd" path="res://assets/kenney_platformerpack/PNG/Backgrounds/blue_land.png" id="1_rknhn"]
 [ext_resource type="Texture2D" uid="uid://tpq0ge2lruix" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bls6pqt8flug3" path="res://scenes/tile_map.tscn" id="3_ucxpt"]
 [ext_resource type="PackedScene" uid="uid://bul5fybv2rytg" path="res://scenes/Area Trigger.tscn" id="4_l54f5"]
 [ext_resource type="PackedScene" uid="uid://cbnlr8iu88w0n" path="res://scenes/LifeCounter.tscn" id="5_dadty"]
 
 [node name="Level 2" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(321, 1080)
+scale = Vector2(5.80078, 3.46289)
+texture = ExtResource("1_rknhn")
 
 [node name="Player" parent="." instance=ExtResource("1")]
 position = Vector2(306.864, 1732.87)

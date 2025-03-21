@@ -1,12 +1,17 @@
 [gd_scene load_steps=6 format=4 uid="uid://damkuqx1xbloy"]
 
 [ext_resource type="PackedScene" uid="uid://gx43bs3f4le8" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://c560nepcrbi5o" path="res://assets/kenney_platformerpack/PNG/Backgrounds/colored_land.png" id="1_2k254"]
 [ext_resource type="PackedScene" uid="uid://bls6pqt8flug3" path="res://scenes/tile_map.tscn" id="2_ixamt"]
 [ext_resource type="Texture2D" uid="uid://tpq0ge2lruix" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bul5fybv2rytg" path="res://scenes/Area Trigger.tscn" id="4_enfm1"]
-[ext_resource type="PackedScene" uid="uid://cbnlr8iu88w0n" path="res://scenes/LifeCounter.tscn" id="5_uuhcu"]
 
 [node name="Level 1" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(676, 178)
+scale = Vector2(3.16406, 1.88574)
+texture = ExtResource("1_2k254")
 
 [node name="Player" parent="." instance=ExtResource("1")]
 position = Vector2(144.475, 47.5724)
@@ -26,7 +31,3 @@ scale = Vector2(10.1706, 0.6163)
 [node name="win_trigger" parent="." instance=ExtResource("4_enfm1")]
 position = Vector2(1743, 394)
 sceneName = "Level 2"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource("5_uuhcu")]
